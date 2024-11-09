@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th, td {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 第一個表格 -->
+    <table>
+        <!-- 第一行，跨三欄並放入標題 -->
+        <tr>
+            <th colspan="3">About--112307024</th>
+        </tr>
+        
+        <!-- 第二行 -->
+        <tr>
+            <!-- 第一欄：插入圖片和圖片標題，並跨三行 -->
+            <td rowspan="3">
+                <img src="personal_photo.jpg" alt="Personal Photo" style="width:100px;height:100px;"><br>
+                <span>Personal Photo</span>
+            </td>
+            
+            <!-- 第二欄，插入姓名和性別 -->
+            <td>Name: <input type="text" name="name"></td>
+            <td>Gender: 
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </td>
+        </tr>
+        
+        <!-- 第三行 -->
+        <tr>
+            <!-- 第二欄，插入縣市選項 -->
+            <td>County: 
+                <select name="county">
+                    <option value="Taipei">Taipei</option>
+                    <option value="Tainan">Tainan</option>
+                    <option value="Taichung">Taichung</option>
+                    <option value="Taoyuan">Taoyuan</option>
+                </select>
+            </td>
+            
+            <!-- 第三欄，插入生日日期選項 -->
+            <td>Birthday: <input type="date" name="birthday"></td>
+        </tr>
+        
+        <!-- 第四行 -->
+        <tr>
+            <!-- 第二欄，插入電子郵件 -->
+            <td>E-mail: <input type="email" name="email"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 第二個表格 -->
+    <table>
+        <!-- 第一行，興趣 -->
+        <tr>
+            <th>Hobby</th>
+            <td>
+                <label><input type="checkbox" name="hobby" value="Swimming"> Swimming</label>
+                <label><input type="checkbox" name="hobby" value="Volleyball"> Volleyball</label>
+                <label><input type="checkbox" name="hobby" value="Movie"> Movie</label>
+                <label><input type="checkbox" name="hobby" value="Game"> Game</label>
+                <label><input type="checkbox" name="hobby" value="Sleep"> Sleep</label>
+            </td>
+        </tr>
+        
+        <!-- 第二行，技能 -->
+        <tr>
+            <th>Skill</th>
+            <td>
+                <label><input type="checkbox" name="skill" value="Java"> Java</label>
+                <label><input type="checkbox" name="skill" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="skill" value="Python"> Python</label>
+                <label><input type="checkbox" name="skill" value="Microsoft Office"> Microsoft Office</label>
+                <label><input type="checkbox" name="skill" value="Premiere"> Premiere</label>
+            </td>
+        </tr>
+        
+        <!-- 第三行，說點什麼 -->
+        <tr>
+            <th>Say something</th>
+            <td><textarea name="comment" placeholder="Say something here." rows="3" cols="30"></textarea></td>
+        </tr>
+    </table>
+    <!-- 表單結尾處增加提交和重設按鈕 -->
+    <form>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    
+</body>
+</html>
